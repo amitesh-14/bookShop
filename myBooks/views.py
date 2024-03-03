@@ -224,5 +224,14 @@ def search_results(request):
         results =Product.objects.all()
     return render(request, 'myBooks/search_results.html', {'results': results, 'x':x,'query': query})
 
+def viewitem(request,p_id):
+    items=Product.objects.get(p_id=p_id)
+    bu=Product.objects.exclude(p_id=p_id).order_by('?')[:5]
+   
+    if request.user.is_authenticated:
+        x=1
+    else:
+        x=0
+    return render(request,'myBooks/item.html',{'bu':bu,'items':items,'x':x})
 
 # Create your views here.

@@ -159,12 +159,13 @@
 											<h2 class="banner-title">{{pro.name}}</h2>
 											<p>{{pro.description}}</p>
 											<div class="btn-wrap">
-												<a href="#" class="btn btn-outline-accent btn-accent-arrow">Read More<i
+													<a href="/item/{{pro.p_id}}" class="btn btn-outline-accent btn-accent-arrow">Read More<i
 														class="icon icon-ns-arrow-right"></i></a>
 											</div>
 										</div>
 									</div>
 									<div class="col-md-4">
+										
 										<img src="media/{{pro.image}}" class="d-block w-100" alt="banner" >
 									</div>
 								</div>
@@ -229,8 +230,9 @@
 							<div class="col-md-3">
 								<div class="product-item">
 									<figure class="product-style">
-
+										<a href="/item/{{pro.p_id}}">
 										<img src="media/{{pro.image}}" alt="Books" class="product-item " >
+										</a>
 										<a href="/add_to_cart/{{pro.p_id}}"><button type="button" class="add-to-cart"
 											data-product-tile="add-to-cart">Add to
 											Cart</button></a>

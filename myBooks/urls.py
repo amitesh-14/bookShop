@@ -5,6 +5,8 @@ urlpatterns = [
     path('signup', views.signup,name="signup-page"),
     path('signout', views.signout,name="signout-page"),
     path('add_to_cart/<int:p_id>', views.add_to_cart,name="add_to_cart-page"),
+    path('item/<int:p_id>', views.viewitem,name="view_item"),
+
     path('allcart', views.viewCart,name="vcart-page"),
     path('remove_cart/<int:id>', views.removeCart,name="remove_cart-page"),
     path("initiate-payment/", views.initiate_payment, name="initiate_payment"),
